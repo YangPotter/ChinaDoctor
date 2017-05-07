@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>中医体质测评</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/bodyDIV.css" />
+		<script type="text/javascript" src="js/tinybox.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/bootbox.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/echarts.min.js"></script>
+		<script type="text/javascript" src="js/clicker.js"></script>
+
+	</head>
+
+	<body>
+		<div id="contain">
+			<div class="container page-header">
+				<div class="row">
+					<div class="col-md-2">
+
+					</div>
+					<div class="col-md-6">
+						<br /><br />
+						<h1>中医体质测评&nbsp;<small><u>TCM physique test</u></small></h1>
+					</div>
+					<div class="col-md-4">
+						<img src="img/SCPattern1.png" />
+					</div>
+				</div>
+
+			</div>
+
+			<div class="container main">
+				<div class="row">
+					<div class="col-md-2">
+
+					</div>
+					<div class="col-md-8">
+						<form action="#" method="post">
+							<div class="form-group">
+								<label><h4>请根据近一年的体验和感觉，回答以下问题 ( 若出现重复问题，请再次作答，不可跳过 ! ) </h4></label>
+							</div>
+
+							<div>
+								<button type="button" class="btn btn-block btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+                                                          A.平和质&nbsp;<span class="glyphicon glyphicon-question-sign"></span>
+                                </button>
+								<br />
+								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title" id="myModalLabel">平和质介绍 (A型)</h4>
+											</div>
+											<div class="modal-body">
+
+												总体特征：阴阳气血调和，以体态适中、面色红润、精力充沛等为主要特征。<br /> 形体特征：体形匀称健壮。
+												<br /> 常见表现：面色、肤色润泽，头发稠密有光泽，目光有神，鼻色明润，嗅觉通利，唇色红润，不易疲劳，精力充沛，耐受寒热，睡眠良好，胃纳佳，二便正常，舌色淡红，苔薄白，脉和缓有力。
+												<br />心理特征：性格随和开朗。<br /> 发病倾向：平素患病较少。
+												<br /> 对外界环境适应能力：对自然环境和社会环境适应能力较强。
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<table id="A" class="table table-striped table-hover table-bordered">
+							<tr class="info">
+								<th>（1）您精力充沛吗？</th>
+							</tr>
+							<tr>
+								<td>
+									<input class="radio-inline" type="radio" name="A0" value="1" /> 没有（根本不）
+									<input class="radio-inline" type="radio" name="A0" value="2" /> 很少（有一点）
+									<input class="radio-inline" type="radio" name="A0" value="3" /> 有时（有些）
+									<input class="radio-inline" type="radio" name="A0" value="4" /> 经常（相当）
+									<input class="radio-inline" type="radio" name="A0" value="5" /> 总是（非常）
+								</td>
+							</tr>
+							<tr class="info">
+								<th>（2）您容易疲乏吗？</th>
+							</tr>
+							<tr>
+								<td>
+									<input class="radio-inline" type="radio" name="A1" value="5" /> 没有（根本不）
+									<input class="radio-inline" type="radio" name="A1" value="4" /> 很少（有一点）
+									<input class="radio-inline" type="radio" name="A1" value="3" /> 有时（有些）
+									<input class="radio-inline" type="radio" name="A1" value="2" /> 经常（相当）
+									<input class="radio-inline" type="radio" name="A1" value="1" /> 总是（非常）
+								</td>
+							</tr>
+							<tr class="info">
+								<th>（3）您说话声音低弱无力吗？</th>
+							</tr>
+							<tr>
+								<td>
+									<input class="radio-inline" type="radio" name="A2" value="5" /> 没有（根本不）
+									<input class="radio-inline" type="radio" name="A2" value="4" /> 很少（有一点）
+									<input class="radio-inline" type="radio" name="A2" value="3" /> 有时（有些）
+									<input class="radio-inline" type="radio" name="A2" value="2" /> 经常（相当）
+									<input class="radio-inline" type="radio" name="A2" value="1" /> 总是（非常）
+								</td>
+							</tr>
+							<tr class="info">
+								<th>（4）您感到闷闷不乐、情绪低沉吗？</th>
+							</tr>
+							<tr>
+								<td>
+									<input class="radio-inline" type="radio" name="A3" value="5" /> 没有（根本不）
+									<input class="radio-inline" type="radio" name="A3" value="4" /> 很少（有一点）
+									<input class="radio-inline" type="radio" name="A3" value="3" /> 有时（有些）
+									<input class="radio-inline" type="radio" name="A3" value="2" /> 经常（相当）
+									<input class="radio-inline" type="radio" name="A3" value="1" /> 总是（非常）
+								</td>
+							</tr>
+							<tr class="info">
+								<th>（5）您比一般人耐受不了寒冷（冬天的寒冷、夏天的冷空调、电扇等）吗？</th>
+							</tr>
+							<tr>
+								<td>
+									<input class="radio-inline" type="radio" name="A4" value="5" /> 没有（根本不）
+									<input class="radio-inline" type="radio" name="A4" value="4" /> 很少（有一点）
+									<input class="radio-inline" type="radio" name="A4" value="3" /> 有时（有些）
+									<input class="radio-inline" type="radio" name="A4" value="2" /> 经常（相当）
+									<input class="radio-inline" type="radio" name="A4" value="1" /> 总是（非常）
+								</td>
+							</tr>
+							<tr class="info">
+								<th>（6）您能适应外界自然和社会环境的变化吗？</th>
+							</tr>
+							<tr>
+								<td>
+									<input class="radio-inline" type="radio" name="A5" value="1" /> 没有（根本不）
+									<input class="radio-inline" type="radio" name="A5" value="2" /> 很少（有一点）
+									<input class="radio-inline" type="radio" name="A5" value="3" /> 有时（有些）
+									<input class="radio-inline" type="radio" name="A5" value="4" /> 经常（相当）
+									<input class="radio-inline" type="radio" name="A5" value="5" /> 总是（非常）
+								</td>
+							</tr>
+							<tr class="info">
+								<th>（7）您容易失眠吗？</th>
+							</tr>
+							<tr>
+								<td>
+									<input class="radio-inline" type="radio" name="A6" value="5" /> 没有（根本不）
+									<input class="radio-inline" type="radio" name="A6" value="4" /> 很少（有一点）
+									<input class="radio-inline" type="radio" name="A6" value="3" /> 有时（有些）
+									<input class="radio-inline" type="radio" name="A6" value="2" /> 经常（相当）
+									<input class="radio-inline" type="radio" name="A6" value="1" /> 总是（非常）
+								</td>
+							</tr>
+							<tr class="info">
+								<th>（8）您容易忘事（健忘）吗？</th>
+							</tr>
+							<tr>
+								<td>
+									<input class="radio-inline" type="radio" name="A7" value="5" /> 没有（根本不）
+									<input class="radio-inline" type="radio" name="A7" value="4" /> 很少（有一点）
+									<input class="radio-inline" type="radio" name="A7" value="3" /> 有时（有些）
+									<input class="radio-inline" type="radio" name="A7" value="2" /> 经常（相当）
+									<input class="radio-inline" type="radio" name="A7" value="1" /> 总是（非常）
+								</td>
+							</tr>
+
+						</table>
+
+								<br /><br />
+								<button type="button" class="btn btn-block btn-info btn-lg" data-toggle="modal" data-target="#myModal2">
+                                                          B.气虚质&nbsp;<span class="glyphicon glyphicon-question-sign"></span>
+                                </button>
+								<br />
+								<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title" id="myModalLabel">气虚质介绍 (B型)</h4>
+											</div>
+											<div class="modal-body">
+
+												总体特征：元气不足，以疲乏、气短、自汗等气虚表现为主要特征。<br /> 形体特征：肌肉松软不实。
+												<br /> 常见表现：平素语音低弱，气短懒言，容易疲乏，精神不振，易出汗，舌淡红，舌边有齿痕，脉弱。
+												<br /> 心理特征：性格内向，不喜冒险。
+												<br /> 发病倾向：易患感冒、内脏下垂等病；病后康复缓慢。
+												<br /> 对外界环境适应能力：不耐受风、寒、暑、湿邪。
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<table id="B" class="table table-striped table-hover table-bordered">
+									<tr class="info">
+										<th>（1）您容易疲乏吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="B0" value="1" /> 没有（根本不）
+											<input type="radio" name="B0" value="2" /> 很少（有一点）
+											<input type="radio" name="B0" value="3" /> 有时（有些）
+											<input type="radio" name="B0" value="4" /> 经常（相当）
+											<input type="radio" name="B0" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（2）您容易气短（呼吸短促，接不上气）吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="B1" value="1" /> 没有（根本不）
+											<input type="radio" name="B1" value="2" /> 很少（有一点）
+											<input type="radio" name="B1" value="3" /> 有时（有些）
+											<input type="radio" name="B1" value="4" /> 经常（相当）
+											<input type="radio" name="B1" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（3）您容易心慌吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="B2" value="1" /> 没有（根本不）
+											<input type="radio" name="B2" value="2" /> 很少（有一点）
+											<input type="radio" name="B2" value="3" /> 有时（有些）
+											<input type="radio" name="B2" value="4" /> 经常（相当）
+											<input type="radio" name="B2" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（4）您容易头晕或站起时晕眩吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="B3" value="1" /> 没有（根本不）
+											<input type="radio" name="B3" value="2" /> 很少（有一点）
+											<input type="radio" name="B3" value="3" /> 有时（有些）
+											<input type="radio" name="B3" value="4" /> 经常（相当）
+											<input type="radio" name="B3" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（5）您比别人容易患感冒吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="B4" value="1" /> 没有（根本不）
+											<input type="radio" name="B4" value="2" /> 很少（有一点）
+											<input type="radio" name="B4" value="3" /> 有时（有些）
+											<input type="radio" name="B4" value="4" /> 经常（相当）
+											<input type="radio" name="B4" value="5" /> 总是（非常）
+
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（6）您喜欢安静、懒得说话吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="B5" value="1" /> 没有（根本不）
+											<input type="radio" name="B5" value="2" /> 很少（有一点）
+											<input type="radio" name="B5" value="3" /> 有时（有些）
+											<input type="radio" name="B5" value="4" /> 经常（相当）
+											<input type="radio" name="B5" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（7）您说话声音低弱无力吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="B6" value="1" /> 没有（根本不）
+											<input type="radio" name="B6" value="2" /> 很少（有一点）
+											<input type="radio" name="B6" value="3" /> 有时（有些）
+											<input type="radio" name="B6" value="4" /> 经常（相当）
+											<input type="radio" name="B6" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（8）您活动量稍大就容易出虚汗吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="B7" value="1" /> 没有（根本不）
+											<input type="radio" name="B7" value="2" /> 很少（有一点）
+											<input type="radio" name="B7" value="3" /> 有时（有些）
+											<input type="radio" name="B7" value="4" /> 经常（相当）
+											<input type="radio" name="B7" value="5" /> 总是（非常）
+										</td>
+									</tr>
+
+								</table>
+
+								<br /><br />
+								<button type="button" class="btn btn-block btn-info btn-lg" data-toggle="modal" data-target="#myModal3">
+                                                          C.阳虚质&nbsp;<span class="glyphicon glyphicon-question-sign"></span>
+                                </button>
+								<br />
+								<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title" id="myModalLabel">阳虚质介绍 (C型)</h4>
+											</div>
+											<div class="modal-body">
+
+												总体特征：阳气不足，以畏寒怕冷、手足不温等虚寒表现为主要特征。<br /> 形体特征：肌肉松软不实。
+												<br /> 常见表现：平素畏冷，手足不温，喜热饮食，精神不振，舌淡胖嫩，脉沉迟。
+												<br /> 心理特征：性格多沉静、内向。
+												<br /> 发病倾向：易患痰饮、肿胀、泄泻等病；感邪易从寒化。
+												<br /> 对外界环境适应能力：耐夏不耐冬；易感风、寒、湿邪。
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<table id="C" class="table table-striped table-hover table-bordered">
+									<tr class="info">
+										<th>（1）您手脚发凉吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="C0" value="1" /> 没有（根本不）
+											<input type="radio" name="C0" value="2" /> 很少（有一点）
+											<input type="radio" name="C0" value="3" /> 有时（有些）
+											<input type="radio" name="C0" value="4" /> 经常（相当）
+											<input type="radio" name="C0" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（2）您胃脘部、背部或腰膝部怕冷吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="C1" value="1" /> 没有（根本不）
+											<input type="radio" name="C1" value="2" /> 很少（有一点）
+											<input type="radio" name="C1" value="3" /> 有时（有些）
+											<input type="radio" name="C1" value="4" /> 经常（相当）
+											<input type="radio" name="C1" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（3）您感到怕冷、衣服比别人穿得多吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="C2" value="1" /> 没有（根本不）
+											<input type="radio" name="C2" value="2" /> 很少（有一点）
+											<input type="radio" name="C2" value="3" /> 有时（有些）
+											<input type="radio" name="C2" value="4" /> 经常（相当）
+											<input type="radio" name="C2" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（4）您比一般人耐受不了寒冷（冬天的寒冷、夏天的空调电扇等）吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="C3" value="1" /> 没有（根本不）
+											<input type="radio" name="C3" value="2" /> 很少（有一点）
+											<input type="radio" name="C3" value="3" /> 有时（有些）
+											<input type="radio" name="C3" value="4" /> 经常（相当）
+											<input type="radio" name="C3" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（5）您比别人容易患感冒吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="C4" value="1" /> 没有（根本不）
+											<input type="radio" name="C4" value="2" /> 很少（有一点）
+											<input type="radio" name="C4" value="3" /> 有时（有些）
+											<input type="radio" name="C4" value="4" /> 经常（相当）
+											<input type="radio" name="C4" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（6）您吃（喝）凉的东西会感到不舒服或者怕吃（喝）凉东西吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="C5" value="1" /> 没有（根本不）
+											<input type="radio" name="C5" value="2" /> 很少（有一点）
+											<input type="radio" name="C5" value="3" /> 有时（有些）
+											<input type="radio" name="C5" value="4" /> 经常（相当）
+											<input type="radio" name="C5" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（7）您受凉或吃（喝）凉的东西后，容易腹泻（拉肚子）吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="C6" value="1" /> 没有（根本不）
+											<input type="radio" name="C6" value="2" /> 很少（有一点）
+											<input type="radio" name="C6" value="3" /> 有时（有些）
+											<input type="radio" name="C6" value="4" /> 经常（相当）
+											<input type="radio" name="C6" value="5" /> 总是（非常）
+										</td>
+									</tr>
+								</table>
+
+								<br /><br />
+								<button type="button" class="btn btn-block btn-info btn-lg" data-toggle="modal" data-target="#myModal4">
+                                                          D.阴虚质&nbsp;<span class="glyphicon glyphicon-question-sign"></span>
+                                </button>
+								<br />
+								<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title" id="myModalLabel">阴虚质介绍 (D型)</h4>
+											</div>
+											<div class="modal-body">
+
+												总体特征：阴液亏少，以口燥咽干、手足心热等虚热表现为主要特征。<br /> 形体特征：体形偏瘦。
+												<br /> 常见表现：手足心热，口燥咽干，鼻微干，喜冷饮，大便干燥，舌红少津，脉细数。
+												<br /> 心理特征：性情急躁，外向好动，活泼。
+												<br /> 发病倾向：易患虚劳、失精、不寐等病；感邪易从热化。
+												<br /> 对外界环境适应能力：耐冬不耐夏；不耐受暑、热、燥邪。
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<table id="D" class="table table-striped table-hover table-bordered">
+									<tr class="info">
+										<th>（1）您感到手脚心发热吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input name="q0" value="1" type="radio"> 没有（根本不）
+											<input name="q0" value="2" type="radio"> 很少（有一点）
+											<input name="q0" value="3" type="radio"> 有时（有些）
+											<input name="q0" value="4" type="radio"> 经常（相当）
+											<input name="q0" value="5" type="radio"> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（2）您感觉身体、脸上发热吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input name="q1" value="1" type="radio"> 没有（根本不）
+											<input name="q1" value="2" type="radio"> 很少（有一点）
+											<input name="q1" value="3" type="radio"> 有时（有些）
+											<input name="q1" value="4" type="radio"> 经常（相当）
+											<input name="q1" value="5" type="radio"> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（3）您皮肤或口唇干吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input name="q2" value="1" type="radio"> 没有（根本不）
+											<input name="q2" value="2" type="radio"> 很少（有一点）
+											<input name="q2" value="3" type="radio"> 有时（有些）
+											<input name="q2" value="4" type="radio"> 经常（相当）
+											<input name="q2" value="5" type="radio"> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（4）您口唇的颜色比一般人红吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input name="q3" value="1" type="radio"> 没有（根本不）
+											<input name="q3" value="2" type="radio"> 很少（有一点）
+											<input name="q3" value="3" type="radio"> 有时（有些）
+											<input name="q3" value="4" type="radio"> 经常（相当）
+											<input name="q3" value="5" type="radio"> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（5）您容易便秘或大便干燥吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input name="q4" value="1" type="radio"> 没有（根本不）
+											<input name="q4" value="2" type="radio"> 很少（有一点）
+											<input name="q4" value="3" type="radio"> 有时（有些）
+											<input name="q4" value="4" type="radio"> 经常（相当）
+											<input name="q4" value="5" type="radio"> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（6）您面部两颧潮红或偏红吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="q5" value="1" /> 没有（根本不）
+											<input type="radio" name="q5" value="2" /> 很少（有一点）
+											<input type="radio" name="q5" value="3" /> 有时（有些）
+											<input type="radio" name="q5" value="4" /> 经常（相当）
+											<input type="radio" name="q5" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（7）您感到眼睛干涩吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input name="q6" value="1" type="radio"> 没有（根本不）
+											<input name="q6" value="2" type="radio"> 很少（有一点）
+											<input name="q6" value="3" type="radio"> 有时（有些）
+											<input name="q6" value="4" type="radio"> 经常（相当）
+											<input name="q6" value="5" type="radio"> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（8）您感到口干咽燥、总想喝水吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input name="q7" value="1" type="radio"> 没有（根本不）
+											<input name="q7" value="2" type="radio"> 很少（有一点）
+											<input name="q7" value="3" type="radio"> 有时（有些）
+											<input name="q7" value="4" type="radio"> 经常（相当）
+											<input name="q7" value="5" type="radio"> 总是（非常）
+										</td>
+									</tr>
+
+								</table>
+
+								<br /><br/>
+								<button type="button" class="btn btn-block btn-info btn-lg" data-toggle="modal" data-target="#myModal5">
+                                                          E.痰湿质&nbsp;<span class="glyphicon glyphicon-question-sign"></span>
+                                </button>
+								<br />
+								<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title" id="myModalLabel">痰湿质介绍 (E型)</h4>
+											</div>
+											<div class="modal-body">
+
+												总体特征：痰湿凝聚，以形体肥胖、腹部肥满、口黏苔腻等痰湿表现为主要特征。<br /> 形体特征：体形肥胖，腹部肥满松软。
+												<br /> 常见表现：面部皮肤油脂较多，多汗且黏，胸闷，痰多，口黏腻或甜，喜食肥甘甜黏，苔腻，脉滑。
+												<br /> 心理特征：性格偏温和、稳重，多善于忍耐。
+												<br /> 发病倾向：易患消渴、中风、胸痹等病。
+												<br /> 对外界环境适应能力：对梅雨季节及湿重环境适应能力差。
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<table id="E" class="table table-striped table-hover table-bordered">
+									<tr class="info">
+										<th>（1）您感到胸闷或腹部胀满吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="E0" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="E0" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="E0" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="E0" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="E0" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（2）您感到身体沉重不轻松或不爽快吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="E1" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="E1" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="E1" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="E1" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="E1" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（3）您腹部肥满松软吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="E2" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="E2" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="E2" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="E2" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="E2" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（4）您有额部油脂分泌多的现象吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="E3" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="E3" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="E3" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="E3" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="E3" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（5）您上眼睑比别人肿（上眼睑有轻微隆起的现象）吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="E4" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="E4" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="E4" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="E4" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="E4" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（6）您嘴里有黏黏的感觉吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="E5" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="E5" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="E5" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="E5" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="E5" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（7）您平时痰多，特别是咽喉部总感到有痰堵着吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="E6" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="E6" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="E6" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="E6" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="E6" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（8）您舌苔厚腻或有舌苔厚厚的感觉吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="E7" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="E7" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="E7" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="E7" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="E7" value="5" /> 总是（非常）
+										</td>
+									</tr>
+
+								</table>
+
+								<br /><br/>
+								<button type="button" class="btn btn-block btn-info btn-lg" data-toggle="modal" data-target="#myModal6">
+                                                          F.湿热质&nbsp;<span class="glyphicon glyphicon-question-sign"></span>
+                                </button>
+								<br />
+								<div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title" id="myModalLabel">湿热质介绍 (F型)</h4>
+											</div>
+											<div class="modal-body">
+
+												总体特征：湿热内蕴，以面垢油光、口苦、苔黄腻等湿热表现为主要特征。<br /> 形体特征：形体中等或偏瘦。
+												<br /> 常见表现：面垢油光，易生痤疮，口苦口干，身重困倦，大便黏滞不畅或燥结，小便短黄，男性易阴囊潮湿，女性易带下增多，舌质偏红，苔黄腻，脉滑数。
+												<br /> 心理特征：容易心烦急躁。
+												<br /> 发病倾向：易患疮疖、黄疸、热淋等病。
+												<br /> 对外界环境适应能力：对夏末秋初湿热气候，湿重或气温偏高环境较难适应。
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<table id="F" class="table table-striped table-hover table-bordered">
+									<tr class="info">
+										<th>（1）您面部或鼻部有油腻感或者油光发亮吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="F0" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="F0" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="F0" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="F0" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="F0" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（2）您容易生痤疮或疮疖吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="F1" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="F1" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="F1" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="F1" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="F1" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（3）您感到口苦或嘴里有异味吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="F2" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="F2" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="F2" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="F2" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="F2" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（4）您大便黏滞不爽、有解不尽的感觉吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="F3" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="F3" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="F3" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="F3" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="F3" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（5）您小便时尿道有发热感、尿色浓（深）吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="F4" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="F4" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="F4" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="F4" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="F4" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（6）限男：您阴囊部位潮湿吗？<br>限女：您白带颜色发黄吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="F5" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="F5" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="F5" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="F5" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="F5" value="5" /> 总是（非常）
+										</td>
+									</tr>
+
+								</table>
+
+								<br /><br/>
+								<button type="button" class="btn btn-block btn-info btn-lg" data-toggle="modal" data-target="#myModal7">
+                                                          G.血瘀质&nbsp;<span class="glyphicon glyphicon-question-sign"></span>
+                                </button>
+								<br />
+								<div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title" id="myModalLabel">血瘀质介绍 (G型)</h4>
+											</div>
+											<div class="modal-body">
+
+												总体特征：血行不畅，以肤色晦黯、舌质紫黯等血瘀表现为主要特征。<br /> 形体特征：胖瘦均见。
+												<br /> 常见表现：肤色晦黯，色素沉着，容易出现瘀斑，口唇黯淡，舌黯或有瘀点，舌下络脉紫黯或增粗，脉涩。
+												<br /> 心理特征：易烦，健忘。
+												<br /> 发病倾向：易患症瘕及痛证、血证等。
+												<br /> 对外界环境适应能力：不耐受寒邪。
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<table id="G" class="table table-striped table-hover table-bordered">
+									<tr class="info">
+										<th>（1）您的皮肤在不知不觉中会出现青紫瘀斑（皮下出血）吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="G0" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="G0" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="G0" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="G0" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="G0" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（2）您两颧部有细微红丝吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="G1" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="G1" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="G1" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="G1" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="G1" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（3）您身体上哪里疼痛吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="G2" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="G2" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="G2" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="G2" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="G2" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（4）您面色晦暗或容易出现褐斑吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="G3" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="G3" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="G3" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="G3" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="G3" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（5）您容易有黑眼圈吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="G4" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="G4" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="G4" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="G4" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="G4" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（6）您容易忘事（健忘）吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="G5" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="G5" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="G5" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="G5" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="G5" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（7）您口唇颜色偏暗吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="G6" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="G6" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="G6" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="G6" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="G6" value="5" /> 总是（非常）
+										</td>
+									</tr>
+
+								</table>
+
+								<br /><br/>
+								<button type="button" class="btn btn-block btn-info btn-lg" data-toggle="modal" data-target="#myModal8">
+                                                          H.气郁质&nbsp;<span class="glyphicon glyphicon-question-sign"></span>
+                                </button>
+								<br />
+								<div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title" id="myModalLabel">气郁质介绍 (H型)</h4>
+											</div>
+											<div class="modal-body">
+
+												总体特征：气机郁滞，以神情抑郁、忧虑脆弱等气郁表现为主要特征。<br /> 形体特征：形体瘦者为多。
+												<br /> 常见表现：神情抑郁，情感脆弱，烦闷不乐，舌淡红，苔薄白，脉弦。
+												<br /> 心理特征：性格内向不稳定、敏感多虑。
+												<br /> 发病倾向：易患脏躁、梅核气、百合病及郁证等。
+												<br /> 对外界环境适应能力：对精神刺激适应能力较差；不适应阴雨天气。
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<table id="H" class="table table-striped table-hover table-bordered">
+									<tr class="info">
+										<th>（1）您感到闷闷不乐、情绪低沉吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="H0" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="H0" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="H0" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="H0" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="H0" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（2）您容易精神紧张、焦虑不安吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="H1" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="H1" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="H1" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="H1" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="H1" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（3）您多愁善感、感情脆弱吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="H2" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="H2" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="H2" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="H2" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="H2" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（4）您容易感到害怕或受到惊吓吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="H3" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="H3" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="H3" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="H3" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="H3" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（5）您胁肋部或乳房胀痛吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="H4" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="H4" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="H4" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="H4" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="H4" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（6）您无缘无故叹气吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="H5" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="H5" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="H5" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="H5" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="H5" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（7）您咽喉部有异物感，且吐之不快、咽之不下吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="H6" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="H6" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="H6" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="H6" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="H6" value="5" /> 总是（非常）
+										</td>
+									</tr>
+
+								</table>
+
+								<br /><br/>
+								<button type="button" class="btn btn-block btn-info btn-lg" data-toggle="modal" data-target="#myModal9">
+                                                          I.特禀质&nbsp;<span class="glyphicon glyphicon-question-sign"></span>
+                                </button>
+								<br />
+								<div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h4 class="modal-title" id="myModalLabel">特禀质介绍 (I型)</h4>
+											</div>
+											<div class="modal-body">
+
+												总体特征：先天失常，以生理缺陷、过敏反应等为主要特征。<br /> 形体特征：过敏体质者一般无特殊；先天禀赋异常者或有畸形，或有生理缺陷。
+												<br /> 常见表现：过敏体质者常见哮喘、风团、咽痒、鼻塞、喷嚏等；患遗传性疾病者有垂直遗传、先天性、家族性特征；患胎传性疾病者具有母体影响胎儿个体生长发育及相关疾病特征。
+												<br /> 心理特征：随禀质不同情况各异。
+												<br /> 发病倾向：过敏体质者易患哮喘、荨麻疹、花粉症及药物过敏等；遗传性疾病如血友病、先天愚型等；胎传性疾病如五迟（立迟、行迟、发迟、齿迟和语迟）、五软（头软、项软、手足软、肌肉软、口软）、解颅、胎惊等。
+												<br /> 对外界环境适应能力：适应能力差，如过敏体质者对易致过敏季节适应能力差，易引发宿疾。
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<table id="I" class="table table-striped table-hover table-bordered">
+									<tr class="info">
+										<th>（1）您没有感冒时也会打喷嚏吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="I0" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="I0" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="I0" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="I0" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="I0" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（2）您没有感冒时也会鼻塞、流鼻涕吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="I1" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="I1" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="I1" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="I1" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="I1" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（3）您有因季节变化、温度变化或异味等原因而咳喘的现象吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="I2" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="I2" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="I2" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="I2" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="I2" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（4）您容易过敏（对药物、食物、气味、花粉或在季节交替、气候变化时）吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="I3" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="I3" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="I3" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="I3" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="I3" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（5）您的皮肤容易起荨麻疹（风团、风疹块、风疙瘩）吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="I4" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="I4" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="I4" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="I4" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="I4" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（6）您的皮肤因过敏出现过紫癜（紫红色瘀点、瘀斑）吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="I5" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="I5" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="I5" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="I5" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="I5" value="5" /> 总是（非常）
+										</td>
+									</tr>
+									<tr class="info">
+										<th>（7）您的皮肤一抓就红，并出现抓痕吗？</th>
+									</tr>
+									<tr>
+										<td>
+											<input class="radio-inline" type="radio" name="I6" value="1" /> 没有（根本不）
+											<input class="radio-inline" type="radio" name="I6" value="2" /> 很少（有一点）
+											<input class="radio-inline" type="radio" name="I6" value="3" /> 有时（有些）
+											<input class="radio-inline" type="radio" name="I6" value="4" /> 经常（相当）
+											<input class="radio-inline" type="radio" name="I6" value="5" /> 总是（非常）
+										</td>
+									</tr>
+
+								</table>
+							</div>
+
+							<div class="form-group" align="center">
+								<button id="resetAll" class="btn btn-danger" type="reset">重置</button> &nbsp;&nbsp;&nbsp;&nbsp;
+								<button id="look" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">查分</button> &nbsp;&nbsp;&nbsp;&nbsp;
+								<button id="back" class="btn btn-warning" onclick="javascript:history.go(-1)">返回</button> &nbsp;&nbsp;&nbsp;&nbsp;
+							</div>
+						</form>
+					</div>
+					<div class="col-md-2">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal" id="myModal1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<span>体质监测结果</span>
+						<button class="close" data-dismiss="modal"><span>&times;</span></button>
+					</div>
+					<div class="modal-body">
+						<div id="echarts" style="width: 500px;height:400px; margin: auto; margin-top: 20px;  "></div>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-warning" onclick="showNext()">下一步</button>
+						<button class="btn btn-primary" data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
